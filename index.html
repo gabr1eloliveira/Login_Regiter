@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de Login e Registro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/login.css"> 
+    <link rel="stylesheet" href="src/register.css">
+    
+</head>
+<body>
+    <main class="container">   
+
+        <section id="login_register_welcome">
+
+            <div id="login_register_welcome_page">
+
+                <div id="login_welcome_main">
+
+                    <h1 class="title-welcome-login-register">Welcome Back!</h1>
+                    <p class="description-welcome-login-register"> to keep conected with us please login with your personal info</p>
+                    <button id="btn_welcome_login" onclick= "mudarEstiloA()">Login</button>
+
+                </div>
+
+                <div id="register_welcome_main">
+
+                    <h1 class="title-welcome-login-register">don't have an account yet?</h1>
+                    <p class="description-welcome-login-register">Enter your personal details and start journey with us</p>
+                    <button id="btn_welcome_register" onclick="mudarEstiloB()">Register</button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="login">
+
+            <div id="login_page">
+                
+                <h1 class="title-login">Login</h1>
+
+                <div class="social-media">
+
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-google"></i>
+                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+
+                </div>
+
+                <p class="description-login">or use your account</p>
+
+                <form action="php.login" id="form_login" method="post" autocomplete="on">
+
+                    <div class="form-group-login">
+                        <input type="email" name="email" id="login_email" required placeholder="Email" autocomplete="email">
+                        <label for="login_email">Email</label>
+                    </div>
+
+                    <div class="form-group-login">
+                        <input type="password" name="senha" id="login_senha" required autocomplete="current-password" placeholder="Senha">
+                        <label for="login_senha">Senha</label>
+                    </div>
+
+                    <p><a href="#">Forgot Password ?</a></p>
+
+                    <button type="submit" id="login_btn">Login</button>
+                
+                </form>
+
+            </div>
+            
+        </section>
+
+        <section id="register">
+
+            <div id="register_page">
+
+                <h1 class="title-register">Registration</h1>
+
+                <div class="social-media">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-google"></i>
+                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+
+                <p class="description-register">or use your email for registration</p>
+
+                <form action="php.register" id="form_register" method="post" autocomplete="on" onsubmit="return verificarSenha()">
+
+                    <div class="form-group-register">
+                        <input type="email" name="email" id="register_email" required placeholder="Email" autocomplete="email">
+                        <label for="register_email">Email</label>
+                    </div>
+
+                    <div class="form-group-register">
+                        <div class="input-wrapper">
+                            <input type="password" name="senha" id="register_senha" required placeholder="Senha" autocomplete="new-password" minlength="8" maxlength="16" >
+                        </div>
+                        <label for="register_senha">Senha</label>
+                    </div>
+
+                    <div class="form-group-register">
+                        <input type="password" name="confirma-Senha" id="confirmar_senha" required placeholder="Confirmar Senha" maxlength="16" minlength="8">
+                        <label for="confirmar_senha">Confirmar Senha</label>
+                    </div>
+
+                    <button type="submit" id="register_btn">Register</button>
+
+                    <p id="mensagem_erro"></p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main> 
+
+    <script src="src/script.js"></script>
+</body>
+</html>

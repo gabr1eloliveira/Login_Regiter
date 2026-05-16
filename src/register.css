@@ -1,0 +1,113 @@
+@charset "utf-8";
+
+#register{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 100vh;
+    background-color: rgb(46, 2, 46);
+    transition: transform 0.8s ease-in-out, opacity 0.6s ease-in-out;
+    transform: translateX(0%);
+}
+
+#register_page{
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.title-register{
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.description-register{
+    color: rgba(255, 255, 255, 0.74);
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.form-group-register input{
+    margin-bottom: 20px;
+    width: 80%;
+    padding: 15px 15px;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.185);
+    background-color: rgb(61, 3, 61);
+}
+
+.form-group-register input:focus{
+    outline: none;
+    border: 2px solid rgb(109, 6, 109);
+    background-color: rgb(61, 3, 61);
+}
+
+.form-group-register label{
+    display: none;
+}
+
+#register_btn{
+    padding: 17px 70px;
+    border-radius: 40px;
+    background-color: rgb(141, 2, 134);
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+#register_btn:hover{
+    background-color: rgb(105, 25, 105);
+    transition: background-color 0.4s;
+}
+
+/* Register Welcome*/
+
+#btn_welcome_register{
+    padding: 17px 70px;
+    border-radius: 40px;
+    background-color: rgb(141, 2, 134);
+    border: 2px solid white;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+#btn_welcome_register:hover{
+    transform: scaleX(1.05);
+   transition: transform 0.6s;
+}
+
+#register_welcome_main{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.8s ease-in-out;
+}
+
+/* Register Welcome Active*/
+
+.active #register_welcome_main{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.active #register{
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-100%);
+}
