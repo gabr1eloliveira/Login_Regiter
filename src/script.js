@@ -75,7 +75,7 @@ function toggleSenha(inputId, iconId) {
     });
 }
 
-//CHAMADA DAS FUNÇÕES
+//CHAMADA DA FUNÇÃO
 toggleSenha("login_senha", "toggle_login");
 toggleSenha("register_senha", "toggle_register");
 toggleSenha("confirmar_senha", "toggle_confirmar");

@@ -102,11 +102,11 @@
 /*Verificar Senha*/
 
 .erro{
-    border: 2px solid red !important;
+    border: 2px solid rgba(255, 0, 0, 0.438) !important;
 }
 
 .sucesso{
-    border: 2px solid green !important;
+    border: 2px solid rgba(0, 128, 0, 0.473) !important;
 }
 
 /* Register Welcome Active*/
