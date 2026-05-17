@@ -1,6 +1,8 @@
 /*Script para alternar entre as telas de login e registro*/
+//ELEENTOS
 let container = document.querySelector(".container");
 
+//FUNÇÕES
 function mudarEstiloA() {
     container.classList.add("active");
 }
@@ -9,11 +11,13 @@ function mudarEstiloB() {
     container.classList.remove("active");
 }
 
+/*VALIDAÇÃO DE SENHA*/ 
+//ELEMENTOS
 let senhaRegister = document.getElementById("register_senha");
 let confirmarRegister = document.getElementById("confirmar_senha");
 let mensagemErroRegister = document.getElementById("mensagem_erro");
 
-// Verificar se as senhas coincidem
+//FUNÇÕES
 function verificarSenha() {
         if (senhaRegister.value !== confirmarRegister.value) {
         mensagemErroRegister.innerText = "As senhas não coincidem.";
@@ -27,10 +31,12 @@ function verificarSenha() {
     return true;
 }
 
+/**VALIDAÇÃO VISUAL DE SENHA */
+//ELEMENTOS
 let senhaRegisterVisual = document.getElementById("register_senha");
 let confirmarRegisterVisual = document.getElementById("confirmar_senha");
 
-// Verificar visualmente se as senhas coincidem
+// FUNÇÕES
 function validarSenhaVisual() {
     if (confirmarRegisterVisual.value === "") {
         confirmarRegisterVisual.classList.remove("erro", "sucesso");
@@ -52,7 +58,8 @@ function validarSenhaVisual() {
 senhaRegisterVisual.addEventListener("input", validarSenhaVisual);
 confirmarRegisterVisual.addEventListener("input", validarSenhaVisual);
 
-// Alternar visualização da senha
+/**ALTERAR VISIBILIDADE DA SENHA */
+//FUNÇÃO
 function toggleSenha(inputId, iconId) {
     let input = document.getElementById(inputId);
     let icon = document.getElementById(iconId);
@@ -68,6 +75,7 @@ function toggleSenha(inputId, iconId) {
     });
 }
 
+//CHAMADA DAS FUNÇÕES
 toggleSenha("login_senha", "toggle_login");
 toggleSenha("register_senha", "toggle_register");
 toggleSenha("confirmar_senha", "toggle_confirmar");
