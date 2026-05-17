@@ -47,6 +47,28 @@ body{
     transition: background-color 0.4s;
 }
 
+/*Monstra / Esconde Senha*/
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding-right: 40px;
+}
+
+.input-wrapper i {
+    position: absolute;
+    right: 12%;
+    top: 37%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: black;
+}
+
 /*Login Register Welcome*/
 
 #login_register_welcome{

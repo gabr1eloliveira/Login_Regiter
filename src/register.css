@@ -99,6 +99,16 @@
     transition: opacity 0.8s ease-in-out;
 }
 
+/*Verificar Senha*/
+
+.erro{
+    border: 2px solid red !important;
+}
+
+.sucesso{
+    border: 2px solid green !important;
+}
+
 /* Register Welcome Active*/
 
 .active #register_welcome_main{
