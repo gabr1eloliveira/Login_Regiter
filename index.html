@@ -5,30 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina de Login e Registro</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="src/style.css">
-    <link rel="stylesheet" href="src/login.css"> 
-    <link rel="stylesheet" href="src/register.css">
+    <link rel="stylesheet" href="src/css/global.css">
+    <link rel="stylesheet" href="src/css/login.css"> 
+    <link rel="stylesheet" href="src/css/register.css">
 </head>
 <body>
     <main class="container">   
 
-        <section id="login_register_welcome">
+        <section class="login_register_welcome">
 
-            <div id="login_register_welcome_page">
+            <div class="login_register_welcome_page">
 
-                <div id="login_welcome_main">
+                <div class="login_welcome_main">
 
                     <h1 class="title-welcome-login-register">Welcome Back!</h1>
                     <p class="description-welcome-login-register"> to keep conected with us please login with your personal info</p>
-                    <button id="btn_welcome_login" onclick= "mudarEstiloA()">Login</button>
+                    <button class="btn_welcome_login" onclick= "mudarEstiloA()">Login</button>
 
                 </div>
 
-                <div id="register_welcome_main">
+                <div class="register_welcome_main">
 
                     <h1 class="title-welcome-login-register">don't have an account yet?</h1>
                     <p class="description-welcome-login-register">Enter your personal details and start journey with us</p>
-                    <button id="btn_welcome_register" onclick="mudarEstiloB()">Register</button>
+                    <button class="btn_welcome_register" onclick="mudarEstiloB()">Register</button>
 
                 </div>
 
@@ -36,9 +36,9 @@
 
         </section>
 
-        <section id="login">
+        <section class="login">
 
-            <div id="login_page">
+            <div class="login_page">
                 
                 <h1 class="title-login">Login</h1>
 
@@ -53,26 +53,24 @@
 
                 <p class="description-login">or use your account</p>
 
-                <form action="php.login" id="form_login" method="post" autocomplete="on">
+                <form action="php.login" class="form_login" method="post" autocomplete="on">
 
                     <div class="form-group-login">
-                        <input type="email" name="email" id="login_email" required placeholder="Email" autocomplete="email">
-                        <label for="login_email">Email</label>
+                        <label><input type="email" name="email" class="login_email" required placeholder="Email" autocomplete="email">Email</label>
                     </div>
 
                     <div class="form-group-login">
                         <div class="input-wrapper">
-                            <input type="password" name="senha" id="login_senha" required autocomplete="current-password" placeholder="Senha">
-                            <i class="fa-regular fa-eye" id="toggle_login"></i>
+                            <label><input type="password" name="senha" class="login_senha" required autocomplete="current-password" placeholder="Senha">Senha</label>
+                            <i class="fa-regular fa-eye toggle_login"></i>
                         </div>
-                        <label for="login_senha">Senha</label>
                     </div>
 
                     <p><a href="#">Forgot Password ?</a></p>
 
-                    <button type="submit" id="login_btn">Login</button>
+                    <button type="submit" class="login_btn">Login</button>
 
-                    <p id="mensagem_erro_login"></p>
+                    <p class="mensagem_erro_login"></p>
                 
                 </form>
 
@@ -80,9 +78,9 @@
             
         </section>
 
-        <section id="register">
+        <section class="register">
 
-            <div id="register_page">
+            <div class="register_page">
 
                 <h1 class="title-register">Registration</h1>
 
@@ -95,31 +93,29 @@
 
                 <p class="description-register">or use your email for registration</p>
 
-                <form action="php.register" id="form_register" method="post" autocomplete="on" onsubmit="return verificarSenha()">
+                <form action="php.register" class="form_register" method="post" autocomplete="on" onsubmit="return verificarSenha()">
 
                     <div class="form-group-register">
-                        <input type="email" name="email" id="register_email" required placeholder="Email" autocomplete="email">
-                        <label for="register_email">Email</label>
-                    </div>
-
-                    <div class="form-group-register">                            <div class="input-wrapper">
-                                <input type="password" name="senha" id="register_senha" required placeholder="Senha" autocomplete="new-password" minlength="8" maxlength="16" >
-                                <i class="fa-regular fa-eye" id="toggle_register"></i>
-                            </div>
-                        <label for="register_senha">Senha</label>
+                        <label><input type="email" name="email" class="register_email" required placeholder="Email" autocomplete="email">Email</label>
                     </div>
 
                     <div class="form-group-register">
                         <div class="input-wrapper">
-                            <input type="password" name="confirma-Senha" id="confirmar_senha" required placeholder="Confirmar Senha" maxlength="16" minlength="8">
-                            <i class="fa-regular fa-eye" id="toggle_confirmar"></i>
+                            <label><input type="password" name="senha" class="register_senha" required placeholder="Senha" autocomplete="new-password" minlength="8" maxlength="16">Senha</label>
+                            <i class="fa-regular fa-eye toggle_register"></i>
                         </div>
-                        <label for="confirmar_senha">Confirmar Senha</label>
                     </div>
 
-                    <button type="submit" id="register_btn">Register</button>
+                    <div class="form-group-register">
+                        <div class="input-wrapper">
+                            <label><input type="password" name="confirma-Senha" class="confirmar_senha" required placeholder="Confirmar Senha" maxlength="16" minlength="8">Confirmar Senha</label>
+                            <i class="fa-regular fa-eye toggle_confirmar"></i>
+                        </div>
+                    </div>
 
-                    <p id="mensagem_erro"></p>
+                    <button type="submit" class="register_btn">Register</button>
+
+                    <p class="mensagem_erro"></p>
 
                 </form>
 
